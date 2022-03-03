@@ -1,3 +1,5 @@
+Fork of lab2ust to add DynamiVox English phoneme set and a few quality of life improvements.
+
 # nnsvslabeling
 Python scripts I made to make NNSVS labeling easier.
 
