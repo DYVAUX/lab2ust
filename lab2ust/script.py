@@ -109,11 +109,11 @@ try:
                             del phonemes[i]
         else:
             vowels = None
-            standalone = ['cl', 'pau', 'br', 'vf', 'sil']
+            standalone = ['cl', 'pau', 'br', 'sil', 'exh']
             phoneme_mode = input('Select phoneme set\n1: Arpabet\n2: X-Sampa\n')
             if phoneme_mode == '1':
                 #Vowel list based on Arpasing
-                vowels = ['aa', 'ae', 'ah', 'ao', 'ax', 'eh', 'er', 'ih', 'iy', 'uh', 'uw', 'aw', 'ay', 'ey', 'ow', 'oy']
+                vowels = [['aa', 'ae', 'ah', 'ao', 'ax', 'eh', 'er', 'ih', 'iy', 'uh', 'uw', 'aw', 'ay', 'a', 'ey', 'e', 'ow', 'o', 'oy', 'en', 'em', 'el', 'eng', 'ix']
             else:
                 #Vowel list from https://en.wikipedia.org/wiki/X-SAMPA#Vowels
                 vowels = ['i', 'y', '1', '}', 'M', 'u', 'I', 'Y', 'I\\', 'U\\', 'U', 'e', '2', '@\\', '8', '7', 'o', 'e_o', '2_o', '@', 'o_o', 'E', '9', '3', '3\\', 'V', 'O', '{', '6', 'a', '&', 'a_"', 'A', 'Q']
@@ -198,10 +198,33 @@ try:
             error = 15 - duration[i]
             duration[i-1] -= error
             duration[i] = 15
+                          
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print (
+    '''
+    WARNING: Qunatization below 60 will not train correctly.
+    
+    Quantize               Note Length
+    none:                  1
+    192nd:                 10
+    128th:                 15
+    64th triplet (L96):    20
+    64th:                  30
+    32nd triplet (L48):    40
+    32nd:                  60
+    16th triple (L24):     80
+    16th:                  120
+    8th triplet (L12):     160
+    8th:                   240
+    4th triplet (L6):      320
+    Quarter:               480
+    '''
+    )
+    
 
-    quant_strength = input('Quantization in note length (int) [15]: ')
+    quant_strength = input('Quantization in note length [default if blank: 60]: ')
     if not quant_strength:
-        quant_strength = 15
+        quant_strength = 60
     else:
         quant_strength = int(quant_strength)
         
