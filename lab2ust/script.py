@@ -110,13 +110,16 @@ try:
         else:
             vowels = None
             standalone = ['cl', 'pau', 'br', 'sil', 'exh']
-            phoneme_mode = input('Select phoneme set\n1: Arpabet\n2: X-Sampa\n')
+            phoneme_mode = input('Select phoneme set\n1: DynamiVox English\n2: DynamiVox Romance\n')
             if phoneme_mode == '1':
-                #Vowel list based on Arpasing
+                #Vowel list for DynamiVox English NNSVS English Support
                 vowels = [['aa', 'ae', 'ah', 'ao', 'ax', 'eh', 'er', 'ih', 'iy', 'uh', 'uw', 'aw', 'ay', 'a', 'ey', 'e', 'ow', 'o', 'oy', 'en', 'em', 'el', 'eng', 'ix']
+            elif phoneme_mode == '2':
+                #Vowel list for DynamiVox Romance Lanugage Support
+                vowels = ['a', 'e', 'i', 'o', 'u', 'aa', 'ao', 'au', 'oa', 'ax', 'eh', 'uu', 'uo', 'ui', 'eu', 'oe', 'er', 'ih', 'uh', 'an', 'en', 'in', 'on', 'un', 'rn']
             else:
-                #Vowel list from https://en.wikipedia.org/wiki/X-SAMPA#Vowels
-                vowels = ['i', 'y', '1', '}', 'M', 'u', 'I', 'Y', 'I\\', 'U\\', 'U', 'e', '2', '@\\', '8', '7', 'o', 'e_o', '2_o', '@', 'o_o', 'E', '9', '3', '3\\', 'V', 'O', '{', '6', 'a', '&', 'a_"', 'A', 'Q']
+                #Vowel list for DynamiVox Romance Lanugage Support
+                vowels = ['a', 'e', 'i', 'o', 'u', 'aa', 'ao', 'au', 'oa', 'ax', 'eh', 'uu', 'uo', 'ui', 'eu', 'oe', 'er', 'ih', 'uh', 'an', 'en', 'in', 'on', 'un', 'rn']
             phoneme_ranges = []
             duration_ranges = []
             i = 0
