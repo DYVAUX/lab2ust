@@ -109,7 +109,7 @@ try:
                             del phonemes[i]
         else:
             vowels = None
-            standalone = ['cl', 'pau', 'br', 'sil', 'exh']
+            standalone = ['cl', 'ct', 'pau', 'sil']
             phoneme_mode = input('Select phoneme set\n1: DynamiVox English\n2: DynamiVox Romance\n')
             if phoneme_mode == '1':
                 #Vowel list for DynamiVox English NNSVS English Support
