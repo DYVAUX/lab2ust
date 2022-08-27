@@ -110,7 +110,7 @@ try:
         else:
             vowels = None
             standalone = ['cl', 'ct', 'pau', 'sil']
-            phoneme_mode = input('Select phoneme set\n1: UPT3 English\n2: DYVAUX Romance\n')
+            phoneme_mode = input('Select phoneme set\n1: Intunist English\n2: DYVAUX Romance\n')
             if phoneme_mode == '1':
                 #Vowel list for UPT3 NNSVS English Support
                 vowels = ['aa', 'ae', 'ah', 'ao', 'ax', 'eh', 'er', 'ih', 'iy', 'uh', 'uw', 'aw', 'ay', 'a', 'ey', 'e', 'ow', 'o', 'oy', 'en', 'em', 'el', 'eng', 'ix', 'exh', 'axh']
