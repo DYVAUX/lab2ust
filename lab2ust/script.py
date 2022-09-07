@@ -112,14 +112,14 @@ try:
             standalone = ['cl', 'ct', 'pau', 'sil']
             phoneme_mode = input('Select phoneme set\n1: Intunist English\n2: DYVAUX Romance\n')
             if phoneme_mode == '1':
-                #Vowel list for UPT3 NNSVS English Support
-                vowels = ['aa', 'ae', 'ah', 'ao', 'ax', 'eh', 'er', 'ih', 'iy', 'uh', 'uw', 'aw', 'ay', 'a', 'ey', 'e', 'ow', 'o', 'oy', 'en', 'em', 'el', 'eng', 'ix', 'exh', 'axh']
+                #Vowel list for Intunist NNSVS English Support
+                vowels = ['aa', 'ae', 'ah', 'ao', 'ax', 'eh', 'er', 'ih', 'iy', 'uh', 'uw', 'aw', 'ay', 'a', 'ey', 'e', 'ow', 'o', 'oy', 'en', 'em', 'el', 'eng', 'ix']
             elif phoneme_mode == '2':
                 #Vowel list for DYVAUX Romance Lanugage Support
-                vowels = ['a', 'e', 'i', 'o', 'u', 'aa', 'ao', 'au', 'oa', 'ax', 'eh', 'uu', 'uo', 'ui', 'eu', 'oe', 'er', 'ih', 'uh', 'an', 'en', 'in', 'on', 'un', 'rn' 'exh', 'axh']
+                vowels = ['a', 'e', 'i', 'o', 'u', 'aa', 'ao', 'au', 'oa', 'ax', 'eh', 'uu', 'uo', 'ui', 'eu', 'oe', 'er', 'ih', 'uh', 'an', 'en', 'in', 'on', 'un', 'rn']
             else:
                 #Vowel list for DYVAUX Romance Lanugage Support
-                vowels = ['a', 'e', 'i', 'o', 'u', 'aa', 'ao', 'au', 'oa', 'ax', 'eh', 'uu', 'uo', 'ui', 'eu', 'oe', 'er', 'ih', 'uh', 'an', 'en', 'in', 'on', 'un', 'rn' 'exh', 'axh']
+                vowels = ['a', 'e', 'i', 'o', 'u', 'aa', 'ao', 'au', 'oa', 'ax', 'eh', 'uu', 'uo', 'ui', 'eu', 'oe', 'er', 'ih', 'uh', 'an', 'en', 'in', 'on', 'un', 'rn']
             phoneme_ranges = []
             duration_ranges = []
             i = 0
